@@ -158,7 +158,7 @@ int main()
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);*/
 
 	// Create a GLFWwindow object that we can use for GLFW's functions
-	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Proyecto Final -  317170115", nullptr, nullptr);
+	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Proyecto Final -  Equipo 8", nullptr, nullptr);
 
 	if (nullptr == window)
 	{
@@ -203,27 +203,42 @@ int main()
 	Shader animShader("Shaders/anim.vs", "Shaders/anim.frag");
 	Shader AnimAves("Shaders/animAves.vs", "Shaders/animAves.frag");
 
+	//ToysRUs
 
-	Model Door1((char*)"Models/toysrus/toysrus/door1.obj");
-	Model Door2((char*)"Models/toysrus/toysrus/door2.obj");
-	Model ToysRus((char*)"Models/toysrus/toysrus/toysrus.obj");
-	Model MasterChief((char*)"Models/toysrus/master-chief/master-chief.obj");
-	Model BasketballHoop((char*)"Models/toysrus/basketball-hoop/basketball-hoop.obj");
-	Model PokemonPlushes((char*)"Models/toysrus/pokemon-plushes/pokemon-plushes.obj");
-	Model DarthVader((char*)"Models/toysrus/darth-vader/darth-vader.obj");
-	Model PayingZone((char*)"Models/toysrus/paying-zone/paying-zone.obj");
-	Model Money((char*)"Models/toysrus/paying-zone/money.obj");
-	Model Shelfs((char*)"Models/toysrus/shelfs/shelfs.obj");
-	Model ToyTrain((char*)"Models/toysrus/toy-train/toy-train.obj");
-	Model Dove((char*)"Models/toysrus/dove/dove.obj");
-	Model Dove2((char*)"Models/toysrus/dove/dove2.obj");
-	Model Dove3((char*)"Models/toysrus/dove/dove3.obj");
-	Model Dove4((char*)"Models/toysrus/dove/dove4.obj");
+	//---objetos animados
+	Model Door1((char*)"Models/toysrus/toysrus/door2.obj");
+	Model Door2((char*)"Models/toysrus/toysrus/door1.obj");
+	Model Money((char*)"Models/toysrus/toysrus/money.obj");
+	Model ToyTrain((char*)"Models/toysrus/toysrus/toy-train.obj");
+ 
+	//---objetos traslúcidos
+	Model DoorWindow1((char*)"Models/toysrus/toysrus/door-window2.obj");
+	Model DoorWindow2((char*)"Models/toysrus/toysrus/door-window1.obj");
 	Model Windows((char*)"Models/toysrus/toysrus/windows.obj");
-	Model DoorWindow1((char*)"Models/toysrus/toysrus/door-window1.obj");
-	Model DoorWindow2((char*)"Models/toysrus/toysrus/door-window2.obj");
-	Model Carts((char*)"Models/toysrus/toysrus/carts.obj");
-	Model MovingCarts((char*)"Models/toysrus/toysrus/moving-carts.obj");
+	//---fachada
+	Model ToysRus((char*)"Models/toysrus/toysrus/toysrus-base.obj");
+
+	//Pastelería
+
+	//---objetos animados
+
+
+	//---objetos traslúcidos
+	
+	//---fachada
+	Model CakeShop((char*)"Models/cake-shop/cake-shop-base.obj");
+
+	//Cafetería HP
+
+//	Model Dove((char*)"Models/toysrus/dove/dove.obj");
+//	Model Dove2((char*)"Models/toysrus/dove/dove2.obj");
+//	Model Dove3((char*)"Models/toysrus/dove/dove3.obj");
+//	Model Dove4((char*)"Models/toysrus/dove/dove4.obj");
+
+	//Base del centro comercial
+
+	Model Mall((char*)"Models/mall/mall-base.obj");
+	Model IceRink((char*)"Models/mall/ice-rink.obj");
 
 	// Build and compile our shader program
 
@@ -544,10 +559,27 @@ int main()
 
 		view = camera.GetViewMatrix();
 
-		//Fachada con puertas
-		//Los objetos puerta se encuentran animados
-
 		glm::mat4 model(1);
+
+		//Base del centro comercial
+		
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Mall.Draw(lightingShader);
+
+		
+		//Fachadas de las tiendas
+		//ToysRUs
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		ToysRus.Draw(lightingShader);
+		//Pastelería
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		CakeShop.Draw(lightingShader);
+
+		//Objetos animados
+		//ToysRUs
+		model = glm::mat4(1);
 		model = glm::translate(model, glm::vec3(0.0f,0.0f,aperturaPuerta1));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Door1.Draw(lightingShader);
@@ -558,74 +590,24 @@ int main()
 		Door2.Draw(lightingShader);
 
 		model = glm::mat4(1);
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		ToysRus.Draw(lightingShader);
-
-		//Repisa con Pokemon de peluche
-		
-		model = glm::mat4(1);
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		PokemonPlushes.Draw(lightingShader);
-
-		//Estatua del Jefe Maestro
-
-		model = glm::mat4(1);
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		MasterChief.Draw(lightingShader);
-
-		//Canasta de basketball
-
-		model = glm::mat4(1);
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		BasketballHoop.Draw(lightingShader);
-		
-		//Estatua de Darth Vader
-
-		model = glm::mat4(1);
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		DarthVader.Draw(lightingShader);
-
-		//Zona de pago
-
-		model = glm::mat4(1);
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		PayingZone.Draw(lightingShader);
-
-		model = glm::mat4(1);
 		model = glm::translate(model, glm::vec3(0.0f, 0.0f, movCajaRegis));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Money.Draw(lightingShader); //cajón de la caja registradora
-		
-		//Repisas de juguetes para niñas y niños
 
 		model = glm::mat4(1);
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		Shelfs.Draw(lightingShader);
-		
-		//Tren de juguete
-
-		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-32.776, -0.682, 15.116));
 		model = glm::rotate(model, glm::radians(movTren), glm::vec3(0.0f, 1.0f, 0.0));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		ToyTrain.Draw(lightingShader);
 
-		//Carritos en fila
 
-		model = glm::mat4(1);
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		Carts.Draw(lightingShader);
-
-		//Carritos que se mueve
-
-		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(movCarroCompras, 0.0f, 0.0f));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		MovingCarts.Draw(lightingShader);
-
-		//Traslucidez en las ventanas
+		//Traslucidez
 
 		glEnable(GL_BLEND);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+		//ToysRUs
+
 		//model = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, 0.0f));
 		model = glm::mat4(1);
 		//model = glm::scale(model, glm::vec3(1.0f));
@@ -645,12 +627,22 @@ int main()
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "transparencia"), 0.0);
 		DoorWindow2.Draw(lightingShader);
 
+		//Pista de Hielo
+
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1f(glGetUniformLocation(lightingShader.Program, "transparencia"), 0.0);
+		IceRink.Draw(lightingShader);
 
 		glDisable(GL_BLEND);
 		glEnable(GL_DEPTH_TEST);
 		glBindVertexArray(0);
 
+
+
 		//Paloma
+
+		/*
 
 		AnimAves.Use();
 		tiempo = glfwGetTime();
@@ -668,21 +660,7 @@ int main()
 		glUniform1f(glGetUniformLocation(AnimAves.Program, "time"), tiempo);
 		Dove.Draw(AnimAves);
 
-		model = glm::mat4(1);
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glUniform1f(glGetUniformLocation(AnimAves.Program, "time"), tiempo);
-		Dove2.Draw(AnimAves);
-
-		model = glm::mat4(1);
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glUniform1f(glGetUniformLocation(AnimAves.Program, "time"), tiempo);
-		Dove3.Draw(AnimAves);
-
-		model = glm::mat4(1);
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glUniform1f(glGetUniformLocation(AnimAves.Program, "time"), tiempo);
-		Dove4.Draw(AnimAves);
-
+		*/
 
 		// Also draw the lamp object, again binding the appropriate shader
 		lampShader.Use();
@@ -873,21 +851,6 @@ void DoMovement()
 		movCamera = 0.01f;//Manda una velocidad de 0.01 a la camara automatica
 
 	}
-
-	if (keys[GLFW_KEY_2])
-	{
-		if (rotRodIzq < 80.0f)
-			rotRodIzq += 1.0f;
-
-	}
-
-	if (keys[GLFW_KEY_3])
-	{
-		if (rotRodIzq > -45)
-			rotRodIzq -= 1.0f;
-
-	}
-
 
 	// Camera controls
 	if (keys[GLFW_KEY_W] || keys[GLFW_KEY_UP])
