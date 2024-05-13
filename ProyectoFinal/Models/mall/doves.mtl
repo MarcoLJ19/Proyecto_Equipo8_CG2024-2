@@ -1,0 +1,240 @@
+newmtl Ch36FBXASC046001SG1
+illum 4
+Kd 0.01 0.01 0.01
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 23.00
+newmtl Ch36FBXASC046002SG
+illum 4
+Kd 0.02 0.02 0.02
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 14.00
+newmtl Ch36FBXASC046003SG
+illum 4
+Kd 0.01 0.01 0.01
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 34.00
+newmtl CubeFBXASC046002SG
+illum 4
+Kd 0.00 0.43 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.11 0.00
+Ns 23.00
+newmtl CubeSG
+illum 4
+Kd 0.55 0.00 0.01
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.14 0.00 0.00
+Ns 23.00
+newmtl CubeSG1
+illum 4
+Kd 0.18 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.05 0.00 0.00
+Ns 23.00
+newmtl CubeSG2
+illum 4
+Kd 0.18 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.05 0.00 0.00
+Ns 23.00
+newmtl CubeSG3
+illum 4
+Kd 0.02 0.01 0.80
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.20
+Ns 23.00
+newmtl CubeSG4
+illum 4
+Kd 0.53 0.29 0.19
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.13 0.07 0.05
+Ns 31.75
+newmtl CylinderFBXASC046006SG
+illum 4
+Kd 0.38 0.16 0.05
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.10 0.04 0.01
+Ns 33.45
+newmtl CylinderFBXASC046006SG1
+illum 4
+Kd 0.80 0.80 0.80
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 23.00
+newmtl CylinderFBXASC046007SG
+illum 4
+Kd 0.48 0.00 0.01
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.12 0.00 0.00
+Ns 23.00
+newmtl SphereSG
+illum 4
+Kd 0.01 0.01 0.01
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 46.31
+newmtl SphereSG1
+illum 4
+Kd 0.02 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.01 0.00 0.00
+Ns 62.00
+newmtl SphereSG2
+illum 4
+Kd 0.68 0.68 0.68
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.17 0.17 0.17
+Ns 31.75
+newmtl TorusFBXASC046001SG
+illum 4
+Kd 0.36 0.36 0.36
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.09 0.09 0.09
+Ns 98.00
+newmtl darth_vader:default001SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.59 0.59 0.59
+Tf 1.00 1.00 1.00
+map_Kd t_hero_jedi_darthvader_innercape_c.dds
+bump  -bm 1 t_hero_jedi_darthvader_innercape_c.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl darth_vader:default004SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.59 0.59 0.59
+Tf 1.00 1.00 1.00
+map_Kd t_hero_jedi_darthvader_helmet_c.dds
+bump  -bm 1 t_hero_jedi_darthvader_helmet_c.jpg
+Ni 1.00
+Ks 0.90 0.90 0.90
+Ns 17.70
+newmtl darth_vader:default005SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.59 0.59 0.59
+Tf 1.00 1.00 1.00
+map_Kd t_hero_jedi_darthvader_glove_c.dds
+bump  -bm 1 t_hero_jedi_darthvader_glove_c2.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl darth_vader:default010SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.59 0.59 0.59
+Tf 1.00 1.00 1.00
+map_Kd t_hero_jedi_darthvader_body_c.dds
+bump  -bm 1 t_hero_jedi_darthvader_body_cs.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl darth_vader:defaultSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.59 0.59 0.59
+Tf 1.00 1.00 1.00
+map_Kd t_hero_jedi_darthvader_cape_c.dds
+bump  -bm 1 t_hero_jedi_darthvader_cape_c.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl default001SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.59 0.59 0.59
+Tf 1.00 1.00 1.00
+map_Kd t_hero_jedi_darthvader_innercape_c.dds
+bump  -bm 1 t_hero_jedi_darthvader_innercape_n.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl default004SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.59 0.59 0.59
+Tf 1.00 1.00 1.00
+map_Kd t_hero_jedi_darthvader_helmet_c.dds
+bump  -bm 1 t_hero_jedi_darthvader_helmet_nv2.jpg
+Ni 1.00
+Ks 0.90 0.90 0.90
+Ns 17.70
+newmtl default005SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.59 0.59 0.59
+Tf 1.00 1.00 1.00
+map_Kd t_hero_jedi_darthvader_glove_c.dds
+bump  -bm 1 t_hero_jedi_darthvader_glove_n.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl default010SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.59 0.59 0.59
+Tf 1.00 1.00 1.00
+map_Kd t_hero_jedi_darthvader_body_c.dds
+bump  -bm 1 t_hero_jedi_darthvader_body_n.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl defaultSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.59 0.59 0.59
+Tf 1.00 1.00 1.00
+map_Kd t_hero_jedi_darthvader_cape_c.dds
+bump  -bm 1 t_hero_jedi_darthvader_cape_n.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl initialShadingGroup
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 0.00
+newmtl lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00

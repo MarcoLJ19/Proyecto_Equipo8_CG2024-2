@@ -206,6 +206,7 @@ int main()
 	//ToysRUs
 
 	//---objetos animados
+	//ToysRUs
 	Model Door1((char*)"Models/toysrus/toysrus/door2.obj");
 	Model Door2((char*)"Models/toysrus/toysrus/door1.obj");
 	Model Money((char*)"Models/toysrus/toysrus/money.obj");
@@ -230,15 +231,13 @@ int main()
 
 	//Cafetería HP
 
-//	Model Dove((char*)"Models/toysrus/dove/dove.obj");
-//	Model Dove2((char*)"Models/toysrus/dove/dove2.obj");
-//	Model Dove3((char*)"Models/toysrus/dove/dove3.obj");
-//	Model Dove4((char*)"Models/toysrus/dove/dove4.obj");
-
 	//Base del centro comercial
 
+	Model Fountain((char*)"Models/fountain/fountain.obj");
 	Model Mall((char*)"Models/mall/mall-base.obj");
 	Model IceRink((char*)"Models/mall/ice-rink.obj");
+	Model Doves((char*)"Models/mall/doves.obj");
+
 
 	// Build and compile our shader program
 
@@ -554,24 +553,30 @@ int main()
 		glm::mat4 tmp = glm::mat4(1.0f); //Temp
 
 
-
 		//Carga de modelos
 
 		view = camera.GetViewMatrix();
 
 		glm::mat4 model(1);
 
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Fountain.Draw(lightingShader);
+
 		//Base del centro comercial
 		
+		model = glm::mat4(1);
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Mall.Draw(lightingShader);
-
 		
 		//Fachadas de las tiendas
+		
 		//ToysRUs
+		
 		model = glm::mat4(1);
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		ToysRus.Draw(lightingShader);
+
 		//Pastelería
 		model = glm::mat4(1);
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
@@ -639,10 +644,7 @@ int main()
 		glBindVertexArray(0);
 
 
-
-		//Paloma
-
-		/*
+		//Palomas
 
 		AnimAves.Use();
 		tiempo = glfwGetTime();
@@ -658,9 +660,7 @@ int main()
 		model = glm::mat4(1);
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1f(glGetUniformLocation(AnimAves.Program, "time"), tiempo);
-		Dove.Draw(AnimAves);
-
-		*/
+		Doves.Draw(AnimAves);
 
 		// Also draw the lamp object, again binding the appropriate shader
 		lampShader.Use();
@@ -679,7 +679,9 @@ int main()
 		model = glm::translate(model, lightPos);
 		//model = glm::scale(model, glm::vec3(0.2f)); // Make it a smaller cube
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		
 		// Draw the light object (using light's vertex attributes)
+		
 		glBindVertexArray(lightVAO);
 		for (GLuint i = 0; i < 4; i++)
 		{
