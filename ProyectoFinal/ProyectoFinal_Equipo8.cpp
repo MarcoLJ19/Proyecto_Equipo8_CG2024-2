@@ -207,6 +207,7 @@ int main()
 
 	//---objetos animados
 	//ToysRUs
+	
 	Model Door1((char*)"Models/toysrus/toysrus/door2.obj");
 	Model Door2((char*)"Models/toysrus/toysrus/door1.obj");
 	Model Money((char*)"Models/toysrus/toysrus/money.obj");
@@ -232,7 +233,7 @@ int main()
 	//Cafetería HP
 
 	//Base del centro comercial
-
+	
 	Model Fountain((char*)"Models/fountain/fountain.obj");
 	Model Mall((char*)"Models/mall/mall-base.obj");
 	Model IceRink((char*)"Models/mall/ice-rink.obj");
@@ -425,12 +426,12 @@ int main()
 
 	// Load textures
 	vector<const GLchar*> faces;
-	faces.push_back("SkyBox/right.jpg");
-	faces.push_back("SkyBox/left.jpg");
-	faces.push_back("SkyBox/top.jpg");
-	faces.push_back("SkyBox/bottom.jpg");
-	faces.push_back("SkyBox/back.jpg");
-	faces.push_back("SkyBox/front.jpg");
+	faces.push_back("SkyBox/right.tga");
+	faces.push_back("SkyBox/left.tga");
+	faces.push_back("SkyBox/top.tga");
+	faces.push_back("SkyBox/bottom.tga");
+	faces.push_back("SkyBox/back.tga");
+	faces.push_back("SkyBox/front.tga");
 
 	GLuint cubemapTexture = TextureLoading::LoadCubemap(faces);
 
@@ -550,7 +551,7 @@ int main()
 
 
 		glBindVertexArray(VAO);
-		glm::mat4 tmp = glm::mat4(1.0f); //Temp
+		//glm::mat4 tmp = glm::mat4(1.0f); //Temp
 
 
 		//Carga de modelos
@@ -661,6 +662,7 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1f(glGetUniformLocation(AnimAves.Program, "time"), tiempo);
 		Doves.Draw(AnimAves);
+
 
 		// Also draw the lamp object, again binding the appropriate shader
 		lampShader.Use();
@@ -886,16 +888,16 @@ void DoMovement()
 	if (animPuertas)
 	{
 		if (puertasAbiertas == false) {
-			aperturaPuerta1 += 0.005f;
-			aperturaPuerta2 -= 0.005f;
+			aperturaPuerta1 += 0.05f;
+			aperturaPuerta2 -= 0.05f;
 			if (aperturaPuerta1 >= 1.35f and aperturaPuerta2 <= -1.35f) {
 				puertasAbiertas = true;
 				animPuertas = false;
 			}
 		}
 		else if (puertasAbiertas == true) {
-			aperturaPuerta1 -= 0.005f;
-			aperturaPuerta2 += 0.005f;
+			aperturaPuerta1 -= 0.05f;
+			aperturaPuerta2 += 0.05f;
 			if (aperturaPuerta1 <= 0.0f and aperturaPuerta2 >= 0.0f) {
 				puertasAbiertas = false;
 				animPuertas = false;

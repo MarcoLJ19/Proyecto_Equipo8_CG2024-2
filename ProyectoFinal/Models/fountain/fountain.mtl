@@ -19,7 +19,7 @@ illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd -mm_0_0.434047_seawaterfull2.jpg
+map_Kd mm_0_0.434047_seawaterfull2.png
 Ni 1.00
 Ks 0.50 0.50 0.50
 Ns 0.06
@@ -28,12 +28,12 @@ illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd -mm_0_0.625442_germany010.jpg
+map_Kd mm_0_0.625442_germany010.png
 Ni 1.00
 newmtl fountain:lambert4SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd -mm_0_0.710345_wood04.jpg
+map_Kd mm_0_0.710345_wood04.png
 Ni 1.00
