@@ -1,26 +1,53 @@
-# -------------🎮🕹️ Proyecto Final 2024-2👾-----------
-## Proyecto base para el proyecto final de computación gráfica interacción humano computadora 
-## **Objetivo**
-El alumno deberá aplicar y demostrar los conocimientos adquiridos durante todo el curso.
-## **Descripción**
-El alumno deberá seleccionar una fachada y un espacio que pueden ser realeso ficticios y presentar imágenes de referencia de dichos espacios para su
-recreación 3D en OpenGL.
-En la imagen de referencia se debe visualizar 7 objetos que el alumno va a recrear virtualmente y donde dichos objetos deben ser lo más parecido a su
-imagen de referencia, así como su ambientación.
-## **Consideraciones**
-- El proyecto se debe entregar de forma individual, con un manual de usuario en donde se explique cada interacción dentro del ambiente virtual recreado y un manual técnico que contenga la documentación del proyecto que incluya objetivos, diagrama de flujo del software, diagrama de Gantt, alcance del proyecto, limitantes, metodología de software, la documentación del código, (no solo es copiar y pegar código y comentar algunas líneas de él) y conclusiones.
-- La documentación del proyecto debe ser entregada tanto en español como en inglés sin ocupar en su totalidad Google translate.
--Se debe compartir la liga de su proyecto en un repositorio en GitHub y se debe subir en la plataforma de classroom a más tardar a las 00:00
-am del miércoles para el grupo 07 y 08 y del día viernes para el grupo 12 y 13 para que el profesor pueda descargar el proyecto para su
-evaluación.
--Proyectos con evaluaciones menores a 5, se considerarán proyectos deficientes y por lo tanto serán sancionados con 2 puntos menos en su calificación final del curso.
--Los objetos recreados repetidamente se contarán como un objeto dentro de la evaluación.
-- Puertas, ventanas, chimeneas y escaleras no se cuentan como objetos ya que se debe recrear obligatoriamente ya que son parte de la ambientación.
-- Se debe ocupar el código base visto durante el curso y otorgado por el profesor en caso contrario se anulará el proyecto y el alumno no
-acreditará el laboratorio.
-- Queda estrictamente prohibido hacer la entrega fuera del repositorio si se hace la entrega fuera de esta plataforma no se revisará el proyecto y
-quedará anulado.
-- Queda prohibido recrear cualquier espacio perteneciente a la UNAM,con temática de los Simpson, Rick and Morty, Bob esponja, la casa de Kamehouse de Dragon Ball, la casa de coraje el perro cobarde y la casa de las chicas super poderosas.
-- No se permite crear ambiente de juegos 3D con bajas características gráficas como los desarrollados para consola ps1,ps2,Xbox,Nintendo 64,etc.
-- Las animaciones realizadas deben de tener contexto es decir no puede estar rotando un objeto nada más para cumplir con la rúbrica, tienen que ir acorde con el contexto del espacio recreado.
-- Para que una animación sea compleja no tiene que ser lineal es decir no solo basta con que se haga una transformación básica en el objeto.
+Requerimientos para generar el proyecto final de la materia de Computación Gráfica e
+
+interacción humano computadora
+
+Objetivo: Que el alumno demuestre la aplicación de los conceptos adquiridos en clase
+y complementar su formación profesional, al planear, desarrollar, implementar y presentar
+un proyecto en equipo.
+
+El equipo realizará una propuesta de proyecto contemplando lo siguiente:
+La propuesta deberá ser entregada con anticipación para obtener su visto bueno antes de
+ser construida mediante un documento de propuesta de proyecto.
+
+El documento deberá incluir una descripción general del proyecto a entregar, imágenes de
+referencia del proyecto a proponer, esquemas de la propuesta de la distribución de cada
+espacio a representar, propuesta de animaciones a realizar y planeación tentativa de la
+realización del proyecto donde se debe incluir el precio aproximado del mismo.
+
+Para todos los elementos, el alumno podrá utilizar las técnicas de modelado geométrico,
+modelado jerárquico, importación de modelos y texturizado para elaborar el escenario.
+Podrá utilizar modelos descargados de internet siempre que se respeten las licencias que
+manejan y en la documentación que se entrega, se coloquen los créditos correspondientes.
+En el proyecto se agregarán al menos cinco (5) elementos con animaciones complejas
+diferentes, las cuales deberán estar aprobadas previamente en el documento de propuesta
+de proyecto. Al menos una de esas animaciones deberá ser por la técnica de KeyFrames.
+
+Queda a criterio del alumno los objetos a animar, pero deben tener relación con el escenario
+que se está construyendo. PROHIBIDO ocupar las animaciones creadas durante las
+sesiones de laboratorio.
+El proyecto deberá ser entregado en formato digital, donde se colocará el proyecto de visual
+studio, al menos 3 videos diferentes del proyecto, mostrando su correcto funcionamiento, un
+manual de usuario, un manual técnico, que incluye el cronograma de actividades realizadas
+para la conclusión del mismo y el precio aproximado del proyecto.
+El manual de usuario deberá estar en formato .pdf y debe contener capturas de pantalla que
+ejemplifiquen cada elemento que describen en el manual y al final capturas de pantalla del
+proyecto.
+El cronograma de actividades deberá estar lo más detallado posible en función del trabajo
+individual y del equipo.
+Se deberán entregar evidencias de haber utilizado herramientas colaborativas para el
+desarrollo del software pudiendo ser Jira, Trello, Git, GitHub, entre otros.
+Una redacción en inglés de forma individual referente a su experiencia adquirida con la
+realización del proyecto.
+Además el proyecto deberá estar en un repositorio exclusivo donde se evaluará cada
+avance que se vaya realizando en él.
+Estos son los elementos mínimos que se deben entregar, no significa que sean los únicos,
+cada equipo tendrá libertad creativa para entregar elementos que puedan mejorar la
+calificación del proyecto.
+Es responsabilidad de cada alumno la realización satisfactoria del proyecto, por lo que las
+acciones de alguno de los miembros del equipo repercute en todos los integrantes.
+Cualquier uso no autorizado de proyectos de semestres anteriores, o contenido generado
+por otro equipo llevará a, dependiendo la gravedad de la falta, una calificación negativa en
+el rubro de proyecto o a tener una calificación reprobatoria en la materia.
+Cualquier otro punto no previsto en este documento será tratado entre el profesor y las
+personas involucradas.
