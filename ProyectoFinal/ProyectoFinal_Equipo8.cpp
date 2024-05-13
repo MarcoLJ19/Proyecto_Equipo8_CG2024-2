@@ -33,7 +33,7 @@ void DoMovement();
 void animacion();
 
 // Window dimensions
-const GLuint WIDTH = 800, HEIGHT = 600;
+const GLuint WIDTH = 1400, HEIGHT = 1200;
 int SCREEN_WIDTH, SCREEN_HEIGHT;
 
 // Camera
@@ -228,7 +228,7 @@ int main()
 	//---objetos traslúcidos
 	
 	//---fachada
-	Model CakeShop((char*)"Models/cake-shop/cake-shop-base.obj");
+	Model Pan((char*)"Models/Pan/TodoJunto.obj");
 
 	//Cafetería HP
 
@@ -581,7 +581,8 @@ int main()
 		//Pastelería
 		model = glm::mat4(1);
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		CakeShop.Draw(lightingShader);
+		Pan.Draw(lightingShader);
+
 
 		//Objetos animados
 		//ToysRUs

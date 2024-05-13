@@ -1,0 +1,20 @@
+# This file uses centimeters as units for non-parametric coordinates.
+
+mtllib VidrioPuerta.mtl
+g default
+v -50.556907 82.739250 -35.224205
+v -50.556907 82.739250 -46.435042
+v -50.556927 67.158240 -35.224205
+v -50.556927 67.158240 -46.435042
+vt 0.001335 0.001992
+vt 0.669021 0.001992
+vt 0.669021 0.998008
+vt 0.001335 0.998008
+vn 1.000000 0.000000 0.000000
+vn 1.000000 0.000000 0.000000
+vn 1.000000 0.000000 0.000000
+vn 1.000000 0.000000 0.000000
+s off
+g VidrioPuerta1:polySurface107polySurface104
+usemtl VidrioPuerta1:lambert12SG
+f 3/1/1 4/2/2 2/3/3 1/4/4

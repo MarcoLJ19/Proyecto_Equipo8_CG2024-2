@@ -1,0 +1,27 @@
+newmtl CajaDeLaCaja:initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl Nube:lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Humo.png
+Ni 1.00
+newmtl VidriosPanaderia:lambert12SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.62 0.62 0.62
+map_Kd Vidrio.png
+Ni 1.00
+newmtl VidriosPanaderia1:lambert12SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.62 0.62 0.62
+map_Kd Vidrio.png
+Ni 1.00
