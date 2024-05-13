@@ -226,7 +226,10 @@ int main()
 
 
 	//---objetos traslúcidos
-	
+	Model Ventanales((char*)"Models/Pan/VidriosPanaderia.obj");
+	Model Focos((char*)"Models/Pan/Focos.obj");
+
+
 	//---fachada
 	Model Pan((char*)"Models/Pan/TodoJunto.obj");
 
@@ -617,6 +620,7 @@ int main()
 
 		//model = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, 0.0f));
 		model = glm::mat4(1);
+
 		//model = glm::scale(model, glm::vec3(1.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "transparencia"), 0.0);
@@ -633,6 +637,18 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "transparencia"), 0.0);
 		DoorWindow2.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, aperturaPuerta2));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1f(glGetUniformLocation(lightingShader.Program, "transparencia"), 0.0);
+		Focos.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, aperturaPuerta2));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1f(glGetUniformLocation(lightingShader.Program, "transparencia"), 0.0);
+		Ventanales.Draw(lightingShader);
 
 		//Pista de Hielo
 

@@ -1,161 +1,502 @@
-newmtl CubeFBXASC046002SG7
+newmtl Chimenea:initialShadingGroup
 illum 4
-Kd 0.66 0.03 0.04
+Kd 0.50 0.50 0.50
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
-Ks 0.00 0.00 0.00
-Ns 23.00
-newmtl CubeFBXASC046002SG8
+newmtl Chimenea:lambert27SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
+map_Kd Metal.png
 Ni 1.00
-Ks 0.00 0.00 0.00
-Ns 23.00
-newmtl CubeFBXASC046002SG9
-illum 4
-Kd 0.01 0.01 0.01
-Ka 0.00 0.00 0.00
-Tf 1.00 1.00 1.00
-Ni 1.00
-Ks 0.00 0.00 0.00
-Ns 23.00
-newmtl CubeFBXASC046002SG10
-illum 4
-Kd 0.47 0.43 0.59
-Ka 0.00 0.00 0.00
-Tf 1.00 1.00 1.00
-Ni 1.00
-Ks 0.12 0.11 0.15
-Ns 23.00
-newmtl CubeFBXASC046002SG11
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl Chimenea:lambert28SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
+map_Kd Ladrillo.png
 Ni 1.00
-Ks 0.00 0.00 0.00
-Ns 23.00
-newmtl CubeFBXASC046002SG12
+newmtl Chimenea:lambert29SG
 illum 4
-Kd 1.00 1.00 1.00
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd chimenea.png
+Ni 1.00
+newmtl Chimenea:phong1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Cobre.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl Muebles1:blinn1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Bordes.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 0.06
+newmtl Muebles1:initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
-Ks 0.25 0.25 0.25
-Ns 23.00
-newmtl CubeFBXASC046002SG13
+newmtl Muebles1:lambert10SG
 illum 4
-Kd 0.18 0.12 0.32
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Blanco.png
+Ni 1.00
+newmtl TodoJunto:blinn1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Bordes.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 0.06
+newmtl TodoJunto:initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
-Ks 0.05 0.03 0.08
-Ns 23.00
-newmtl MuchosCroissant:lambert4SG
+newmtl TodoJunto:lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd PanInterior.png
+Ni 1.00
+newmtl TodoJunto:lambert4SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd Pan.png
 Ni 1.00
-newmtl MuchosCroissant1:lambert4SG
+newmtl TodoJunto:lambert4SG2
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd Pan.png
 Ni 1.00
-newmtl MuchosMACARRONES:lambert14SG
+newmtl TodoJunto:lambert4SG4
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Pan.png
+Ni 1.00
+newmtl TodoJunto:lambert5SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Ceramica.png
+Ni 1.00
+newmtl TodoJunto:lambert7SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Dulces.png
+Ni 1.00
+newmtl TodoJunto:lambert8SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Madera.png
+Ni 1.00
+newmtl TodoJunto:lambert10SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Blanco.png
+Ni 1.00
+newmtl TodoJunto:lambert10SG2
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Blanco.png
+Ni 1.00
+newmtl TodoJunto:lambert13SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Glaceado.png
+Ni 1.00
+newmtl TodoJunto:lambert14SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd rosa.png
 Ni 1.00
-newmtl MuchosMACARRONES:lambert15SG
+newmtl TodoJunto:lambert15SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd rosa2.png
 Ni 1.00
-newmtl MuchosMACARRONES:lambert16SG
+newmtl TodoJunto:lambert16SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd rosa3.png
 Ni 1.00
-newmtl MuchosMACARRONES:lambert17SG
+newmtl TodoJunto:lambert17SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd rosa4.png
 Ni 1.00
-newmtl MuchosMACARRONES:lambert18SG
+newmtl TodoJunto:lambert18SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd rosa5.png
 Ni 1.00
-newmtl MuchosMACARRONES:lambert19SG
+newmtl TodoJunto:lambert19SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd rosa6.png
 Ni 1.00
-newmtl MuchosMACARRONES:lambert20SG
+newmtl TodoJunto:lambert20SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd rosa7.png
 Ni 1.00
-newmtl MuchosMACARRONES:lambert21SG
+newmtl TodoJunto:lambert21SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd rosa8.png
 Ni 1.00
-newmtl MuchosMACARRONES:lambert22SG
+newmtl TodoJunto:lambert22SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd rosa9.png
 Ni 1.00
-newmtl MuchosMACARRONES:lambert23SG
+newmtl TodoJunto:lambert23SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd rosa10.png
 Ni 1.00
-newmtl MuchosMACARRONES:lambert24SG
+newmtl TodoJunto:lambert24SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd rosa11.png
 Ni 1.00
-newmtl MuchosMACARRONES:lambert25SG
+newmtl TodoJunto:lambert25SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd rosa12.png
 Ni 1.00
-newmtl VidriosPanaderia:lambert12SG
+newmtl TodoJunto:lambert27SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
-Tf 0.62 0.62 0.62
-map_Kd Vidrio.png
+Tf 1.00 1.00 1.00
+map_Kd Metal.png
 Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl TodoJunto:lambert27SG2
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Metal.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl TodoJunto:lambert28SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd calcu.png
+Ni 1.00
+newmtl TodoJunto:lambert28SG2
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Ladrillo.png
+Ni 1.00
+newmtl TodoJunto:lambert29SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd chimenea.png
+Ni 1.00
+newmtl TodoJunto:phong1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Cobre.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl TodoJunto5:blinn1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Bordes.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 0.06
+newmtl TodoJunto5:initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl TodoJunto5:lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd PanInterior.png
+Ni 1.00
+newmtl TodoJunto5:lambert4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Pan.png
+Ni 1.00
+newmtl TodoJunto5:lambert4SG2
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Pan.png
+Ni 1.00
+newmtl TodoJunto5:lambert4SG4
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Pan.png
+Ni 1.00
+newmtl TodoJunto5:lambert5SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Ceramica.png
+Ni 1.00
+newmtl TodoJunto5:lambert7SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Dulces.png
+Ni 1.00
+newmtl TodoJunto5:lambert8SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Madera.png
+Ni 1.00
+newmtl TodoJunto5:lambert10SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Blanco.png
+Ni 1.00
+newmtl TodoJunto5:lambert10SG2
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Blanco.png
+Ni 1.00
+newmtl TodoJunto5:lambert13SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Glaceado.png
+Ni 1.00
+newmtl TodoJunto5:lambert14SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd rosa.png
+Ni 1.00
+newmtl TodoJunto5:lambert15SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd rosa2.png
+Ni 1.00
+newmtl TodoJunto5:lambert16SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd rosa3.png
+Ni 1.00
+newmtl TodoJunto5:lambert17SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd rosa4.png
+Ni 1.00
+newmtl TodoJunto5:lambert18SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd rosa5.png
+Ni 1.00
+newmtl TodoJunto5:lambert19SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd rosa6.png
+Ni 1.00
+newmtl TodoJunto5:lambert20SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd rosa7.png
+Ni 1.00
+newmtl TodoJunto5:lambert21SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd rosa8.png
+Ni 1.00
+newmtl TodoJunto5:lambert22SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd rosa9.png
+Ni 1.00
+newmtl TodoJunto5:lambert23SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd rosa10.png
+Ni 1.00
+newmtl TodoJunto5:lambert24SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd rosa11.png
+Ni 1.00
+newmtl TodoJunto5:lambert25SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd rosa12.png
+Ni 1.00
+newmtl TodoJunto5:lambert27SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Metal.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl TodoJunto5:lambert27SG2
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Metal.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl TodoJunto5:lambert28SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd calcu.png
+Ni 1.00
+newmtl TodoJunto5:lambert28SG2
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Ladrillo.png
+Ni 1.00
+newmtl TodoJunto5:lambert29SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd chimenea.png
+Ni 1.00
+newmtl TodoJunto5:phong1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Cobre.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl VidriosPanaderia2:lambert12SG
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
