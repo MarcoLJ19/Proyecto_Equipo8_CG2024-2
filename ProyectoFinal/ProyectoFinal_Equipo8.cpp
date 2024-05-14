@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <cmath>
 
 // GLEW
@@ -46,7 +46,7 @@ float range = 0.0f;
 float rot = 0.0f;
 float movCamera = 0.0f;
 
-//variables útiles para las animaciones
+//variables Ãºtiles para las animaciones
 bool puertasAbiertas = false;
 bool animPuertas = false;
 bool animTren = true;
@@ -60,6 +60,32 @@ float movTren = 0.0f;
 float tiempo;
 float speed;
 float movCarroCompras;
+
+
+float rotar = 0.0f;
+float rotarLado = 0.0f;
+bool AnimLlanta = false;
+bool sentidoLlanta = false;
+float giro = 0;
+float tiempoFuego;
+float velocidad = 5.0f;
+float y, tiempoX;
+bool AnimMariposa = false;
+float amplitude = 1.0f; // Amplitud de la onda
+float frequency = 1.0f; // Frecuencia de la onda
+float phase = 0.0f;     // Fase inicial de la onda
+float tiempoM = 0.0f;
+
+
+//Varoables para las animaciones
+float posXC = 0.0f;
+float posZP = 0.0f;
+bool cajonA = false;
+bool cajonC = true;
+bool puertaA = false;
+bool puertaC = true;
+bool hornoA = false;
+bool hornoC = true;
 
 // Light attributes
 glm::vec3 lightPos(0.0f, 0.0f, 0.0f);
@@ -202,33 +228,35 @@ int main()
 	Shader SkyBoxshader("Shaders/SkyBox.vs", "Shaders/SkyBox.frag");
 	Shader animShader("Shaders/anim.vs", "Shaders/anim.frag");
 	Shader AnimAves("Shaders/animAves.vs", "Shaders/animAves.frag");
+	Shader AnimFuego("Shaders/animFuego.vs", "Shaders/animFuego.frag");
 
 	//ToysRUs
 
 	//---objetos animados
 	//ToysRUs
-	
+
 	Model Door1((char*)"Models/toysrus/toysrus/door2.obj");
 	Model Door2((char*)"Models/toysrus/toysrus/door1.obj");
 	Model Money((char*)"Models/toysrus/toysrus/money.obj");
 	Model ToyTrain((char*)"Models/toysrus/toysrus/toy-train.obj");
- 
-	//---objetos traslúcidos
+
+	//---objetos traslÃºcidos
 	Model DoorWindow1((char*)"Models/toysrus/toysrus/door-window2.obj");
 	Model DoorWindow2((char*)"Models/toysrus/toysrus/door-window1.obj");
 	Model Windows((char*)"Models/toysrus/toysrus/windows.obj");
 	//---fachada
 	Model ToysRus((char*)"Models/toysrus/toysrus/toysrus-base.obj");
 
-	//Pastelería
+	//PastelerÃ­a
 
 	//---objetos animados
 	Model Principal((char*)"Models/Pan/Puerta.obj");
 	Model PHorno((char*)"Models/Pan/PuertaHorno.obj");
 	Model VPuerta((char*)"Models/Pan/VidrioPuerta.obj");
+	Model CajonCaja((char*)"Models/Pan/CajadelaCajaRegtrsadora.obj");
 
 
-	//---objetos traslúcidos
+	//---objetos traslÃºcidos
 	Model Ventanales((char*)"Models/Pan/VidriosPanaderia.obj");
 	Model Focos((char*)"Models/Pan/Focos.obj");
 	Model VidrioP((char*)"Models/Pan/VidrioPuerta.obj");
@@ -236,21 +264,32 @@ int main()
 	//---fachada
 	Model Pan((char*)"Models/Pan/TodoJunto.obj");
 
-	//Cafetería HP
+	//CafeterÃ­a HP
 
 	//Base del centro comercial
-	
+
 	Model Fountain((char*)"Models/fountain/fountain.obj");
 	Model Mall((char*)"Models/mall/mall-base.obj");
 	Model IceRink((char*)"Models/mall/ice-rink.obj");
 	Model Doves((char*)"Models/mall/doves.obj");
+	Model cafeteria((char*)"Models/hp-cafe/Fachada.obj");
+	Model llantaDer((char*)"Models/hp-cafe/LlantaDer.obj");
+	Model llantaIzq((char*)"Models/hp-cafe/LlantaIzq.obj");
+	Model Agua((char*)"Models/hp-cafe/Agua.obj");
+	Model Fuego((char*)"Models/hp-cafe/Fuego.obj");
+	Model mariposas((char*)"Models/hp-cafe/Mariposas.obj");
+	Model mariposas1((char*)"Models/hp-cafe/Mariposa1.obj");
+	Model mariposas2((char*)"Models/hp-cafe/Mariposa2.obj");
+	Model mariposas3((char*)"Models/hp-cafe/Mariposa3.obj");
+	Model mariposas4((char*)"Models/hp-cafe/Mariposa4.obj");
+	Model mariposas5((char*)"Models/hp-cafe/Mariposa5.obj");
+	Model mariposas6((char*)"Models/hp-cafe/Mariposa6.obj");
 
+// Build and compile our shader program
 
-	// Build and compile our shader program
+//InicializaciÃ³n de KeyFrames
 
-	//Inicialización de KeyFrames
-
-	for (int i = 0; i < MAX_FRAMES; i++)
+for (int i = 0; i < MAX_FRAMES; i++)
 	{
 		KeyFrame[i].posX = 0;
 		KeyFrame[i].incX = 0;
@@ -571,20 +610,20 @@ int main()
 		Fountain.Draw(lightingShader);
 
 		//Base del centro comercial
-		
+
 		model = glm::mat4(1);
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Mall.Draw(lightingShader);
-		
+
 		//Fachadas de las tiendas
-		
+
 		//ToysRUs
-		
+
 		model = glm::mat4(1);
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		ToysRus.Draw(lightingShader);
 
-		//Pastelería
+		//PastelerÃ­a
 		model = glm::mat4(1);
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Pan.Draw(lightingShader);
@@ -593,7 +632,7 @@ int main()
 		//Objetos animados
 		//ToysRUs
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(0.0f,0.0f,aperturaPuerta1));
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, aperturaPuerta1));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Door1.Draw(lightingShader);
 
@@ -605,7 +644,7 @@ int main()
 		model = glm::mat4(1);
 		model = glm::translate(model, glm::vec3(0.0f, 0.0f, movCajaRegis));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		Money.Draw(lightingShader); //cajón de la caja registradora
+		Money.Draw(lightingShader); //cajÃ³n de la caja registradora
 
 		model = glm::mat4(1);
 		model = glm::translate(model, glm::vec3(-32.776, -0.682, 15.116));
@@ -620,8 +659,7 @@ int main()
 		Principal.Draw(lightingShader);
 
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(-32.776, -0.682, 15.116));
-		model = glm::rotate(model, glm::radians(movTren), glm::vec3(0.0f, 1.0f, 0.0));
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, aperturaPuerta1));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		PHorno.Draw(lightingShader);
 
@@ -640,7 +678,7 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "transparencia"), 0.0);
 		Windows.Draw(lightingShader);
-		
+
 		model = glm::mat4(1);
 		model = glm::translate(model, glm::vec3(0.0f, 0.0f, aperturaPuerta1));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
@@ -654,24 +692,36 @@ int main()
 		DoorWindow2.Draw(lightingShader);
 
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(0.0f, 0.0f, aperturaPuerta2));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "transparencia"), 0.0);
 		Focos.Draw(lightingShader);
 
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(0.0f, 0.0f, aperturaPuerta2));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "transparencia"), 0.0);
 		Ventanales.Draw(lightingShader);
-
+		
 		//Tambien va animado
 
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(0.0f, 0.0f, aperturaPuerta2));
+		view = camera.GetViewMatrix();
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f + posZP));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "transparencia"), 0.0);
+		Principal.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+		glUniform1f(glGetUniformLocation(lightingShader.Program, "transparencia"), 0.0);
 		VidrioP.Draw(lightingShader);
+
+		if (puertaA == true && posZP < 13) {
+			posZP += 0.02;
+		}
+		else if (puertaC == true && posZP > 0) {
+			posZP -= 0.02;
+		}
+
 
 		//Pista de Hielo
 
@@ -704,9 +754,118 @@ int main()
 		Doves.Draw(AnimAves);
 
 
+
+		//Cafeteria Harry Potter
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		cafeteria.Draw(lightingShader);
+
+
+
+
+		model = glm::translate(model, glm::vec3(-15.538f, 3.257f, -81.542f));
+		model = glm::rotate(model, glm::radians(rotar), glm::vec3(0.0f, 0.0f, 1.0f));
+		model = glm::rotate(model, glm::radians(rotarLado), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		llantaDer.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-15.566f, 2.856f, -78.943f));
+		model = glm::rotate(model, glm::radians(rotar), glm::vec3(0.0f, 0.0f, 1.0f));
+		model = glm::rotate(model, glm::radians(rotarLado), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		llantaIzq.Draw(lightingShader);
+
+
+
+
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(0.0f, 4.141f, -70.679f));
+		model = glm::translate(model, glm::vec3(4 * y, 1.5 * y, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		mariposas.Draw(lightingShader);
+
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-2.166f, 5.393f, -71.423f));
+		model = glm::translate(model, glm::vec3(-0.5 * sin(tiempoX), 0.5 * y, -0.5 * sin(tiempoX)));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		mariposas1.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-0.859f, 5.383f, -68.613f));
+		model = glm::translate(model, glm::vec3(0.2 * sin(tiempoX), -y, 0.5 * sin(tiempoX)));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		mariposas2.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-0.733, 5.487, -66.35f));
+		model = glm::translate(model, glm::vec3(-0.8 * sin(tiempoX), 0.6 * y, -0.5 * sin(tiempoX)));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		mariposas3.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-1.905f, 5.633f, -64.989f));
+		model = glm::translate(model, glm::vec3(0.6 * sin(tiempoX), -0.5 * y, -0.5 * sin(tiempoX)));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		mariposas4.Draw(lightingShader);
+
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-0.925f, 5.652f, -63.764f));
+		model = glm::translate(model, glm::vec3(-0.4 * sin(tiempoX), 0.6 * y, -0.5 * sin(tiempoX)));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		mariposas5.Draw(lightingShader);
+
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(0.0f, 5.665f, -62.028f));
+		model = glm::translate(model, glm::vec3(0.08 * sin(tiempoX), -0.3 * y, -0.08 * sin(tiempoX)));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		mariposas6.Draw(lightingShader);
+
+		AnimFuego.Use();
+		tiempoFuego = glfwGetTime() * velocidad;
+		// Get location objects for the matrices on the lamp shader (these could be different on a different shader)
+		modelLoc = glGetUniformLocation(AnimFuego.Program, "model");
+		viewLoc = glGetUniformLocation(AnimFuego.Program, "view");
+		projLoc = glGetUniformLocation(AnimFuego.Program, "projection");
+		// Set matrices
+		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1f(glGetUniformLocation(AnimFuego.Program, "time"), tiempoFuego);
+		Agua.Draw(AnimFuego);
+		glBindVertexArray(0);
+
+
+		AnimFuego.Use();
+		tiempoFuego = glfwGetTime() * velocidad;
+		// Get location objects for the matrices on the lamp shader (these could be different on a different shader)
+		modelLoc = glGetUniformLocation(AnimFuego.Program, "model");
+		viewLoc = glGetUniformLocation(AnimFuego.Program, "view");
+		projLoc = glGetUniformLocation(AnimFuego.Program, "projection");
+		// Set matrices
+		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-14.653f, 3.636f, -86.877f));
+		model = glm::translate(model, glm::vec3(0, 0.07 * sin(tiempoFuego), 0));
+		model = glm::rotate(model, glm::radians(giro), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1f(glGetUniformLocation(AnimFuego.Program, "time"), tiempoFuego);
+		Fuego.Draw(AnimFuego);
+		glBindVertexArray(0);
+
+
+
 		// Also draw the lamp object, again binding the appropriate shader
 		lampShader.Use();
-	
+
 
 		// Get location objects for the matrices on the lamp shader (these could be different on a different shader)
 		modelLoc = glGetUniformLocation(lampShader.Program, "model");
@@ -721,9 +880,9 @@ int main()
 		model = glm::translate(model, lightPos);
 		//model = glm::scale(model, glm::vec3(0.2f)); // Make it a smaller cube
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		
+
 		// Draw the light object (using light's vertex attributes)
-		
+
 		glBindVertexArray(lightVAO);
 		for (GLuint i = 0; i < 4; i++)
 		{
@@ -920,7 +1079,7 @@ void DoMovement()
 		camera.ProcessKeyboard(RIGHT, deltaTime);
 	}
 
-	//Animación de las puertas
+	//AnimaciÃ³n de las puertas
 
 	if (keys[GLFW_KEY_P])
 		animPuertas = true;
@@ -966,10 +1125,100 @@ void DoMovement()
 		}
 	}
 
+	if (keys[GLFW_KEY_2])
+	{
+		AnimLlanta = !AnimLlanta;
+		rotar = 0;
+		sentidoLlanta = false;
+		rotarLado = 0;
+	}
+
+	if (AnimLlanta) {
+		if (rotar >= 0.0f && rotar < 360.00f) {
+			rotar += 0.5f;
+			if (rotar >= 360.0f)
+				sentidoLlanta = true;
+		}
+
+
+		if (rotar >= 360.0f && sentidoLlanta == true) {
+			rotarLado += 0.15f;
+			if (rotarLado >= 30.0f)
+				sentidoLlanta = false;
+		}
+
+		if (rotar >= 360.0f && sentidoLlanta == false) {
+			rotarLado -= 0.15f;
+			if (rotarLado <= 0.0f)
+				sentidoLlanta = true;
+		}
+
+
+
+
+	}
+
+
+	if (keys[GLFW_KEY_3])
+	{
+		AnimMariposa = !AnimMariposa;
+
+	}
+
+	if (AnimMariposa) {
+
+		// Calcular la posiciÃ³n en la trayectoria senoidal
+		y = amplitude * 0.5 * sin(frequency * tiempoM + phase);
+
+		if (y <= -amplitude || y >= amplitude) {
+			phase += glm::pi<float>(); // Cambiar la fase en Ï€ radianes
+		}
+
+		tiempoX = glfwGetTime() * velocidad;
+	}
+
+
+
+
+
+	if (giro >= 0) {
+		giro += 0.15f;
+	}
+
+
 	if (animTren)
 		movTren += 0.25f;
 
 	if (keys[GLFW_KEY_I])
 		movCarroCompras += 0.005f;
 
+	if (keys[GLFW_KEY_L])
+	{
+		if (cajonC == true && posXC < 0.01f) {
+			cajonA = true;
+			cajonC = false;
+			posXC += 0.03;
+		}
+		else if (cajonA == true && posXC > 1.2f) {
+			cajonC = true;
+			cajonA = false;
+			posXC -= 0.03;
+		}
+
+	}
+
+	if (keys[GLFW_KEY_T])
+	{
+		if (puertaC == true && posZP < 0.01f) {
+			puertaA = true;
+			puertaC = false;
+			posZP += 0.03;
+		}
+		else if (puertaA == true && posZP > 1.2f) {
+			puertaC = true;
+			puertaA = false;
+			posZP -= 0.03;
+		}
+
+	}
 }
