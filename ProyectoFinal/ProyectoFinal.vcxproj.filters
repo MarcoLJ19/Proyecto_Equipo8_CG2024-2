@@ -14,7 +14,7 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="Archivos de origen\Shaders">
-      <UniqueIdentifier>{b2acf009-b5f7-4866-9185-9a92dea453a5}</UniqueIdentifier>
+      <UniqueIdentifier>{519fe6cc-0b0e-426c-9705-a3f0c4e6b967}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -23,10 +23,27 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ProyectoFinal_Equipo8.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Shaders\anim.frag">
       <Filter>Archivos de origen\Shaders</Filter>
     </None>
     <None Include="Shaders\anim.vs">
+      <Filter>Archivos de origen\Shaders</Filter>
+    </None>
+    <None Include="Shaders\animAves.frag">
+      <Filter>Archivos de origen\Shaders</Filter>
+    </None>
+    <None Include="Shaders\animAves.vs">
+      <Filter>Archivos de origen\Shaders</Filter>
+    </None>
+    <None Include="Shaders\AnimFuego.frag">
+      <Filter>Archivos de origen\Shaders</Filter>
+    </None>
+    <None Include="Shaders\AnimFuego.vs">
       <Filter>Archivos de origen\Shaders</Filter>
     </None>
     <None Include="Shaders\lamp.frag">
@@ -53,16 +70,5 @@
     <None Include="Shaders\SkyBox.vs">
       <Filter>Archivos de origen\Shaders</Filter>
     </None>
-    <None Include="Shaders\animAves.frag">
-      <Filter>Archivos de origen\Shaders</Filter>
-    </None>
-    <None Include="Shaders\animAves.vs">
-      <Filter>Archivos de origen\Shaders</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="ProyectoFinal_Equipo8.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

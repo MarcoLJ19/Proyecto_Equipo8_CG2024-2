@@ -22,10 +22,15 @@
     <ClInclude Include="Model.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ProyectoFinal_Equipo8.cpp" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Shaders\anim.frag" />
     <None Include="Shaders\anim.vs" />
     <None Include="Shaders\animAves.frag" />
     <None Include="Shaders\animAves.vs" />
+    <None Include="Shaders\AnimFuego.frag" />
+    <None Include="Shaders\AnimFuego.vs" />
     <None Include="Shaders\lamp.frag" />
     <None Include="Shaders\lamp.vs" />
     <None Include="Shaders\lighting.frag" />
@@ -34,9 +39,6 @@
     <None Include="Shaders\modelLoading.vs" />
     <None Include="Shaders\SkyBox.frag" />
     <None Include="Shaders\SkyBox.vs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="ProyectoFinal_Equipo8.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
