@@ -223,12 +223,15 @@ int main()
 	//Pastelería
 
 	//---objetos animados
+	Model Principal((char*)"Models/Pan/Puerta.obj");
+	Model PHorno((char*)"Models/Pan/PuertaHorno.obj");
+	Model VPuerta((char*)"Models/Pan/VidrioPuerta.obj");
 
 
 	//---objetos traslúcidos
 	Model Ventanales((char*)"Models/Pan/VidriosPanaderia.obj");
 	Model Focos((char*)"Models/Pan/Focos.obj");
-
+	Model VidrioP((char*)"Models/Pan/VidrioPuerta.obj");
 
 	//---fachada
 	Model Pan((char*)"Models/Pan/TodoJunto.obj");
@@ -610,6 +613,18 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		ToyTrain.Draw(lightingShader);
 
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-32.776, -0.682, 15.116));
+		model = glm::rotate(model, glm::radians(movTren), glm::vec3(0.0f, 1.0f, 0.0));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Principal.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-32.776, -0.682, 15.116));
+		model = glm::rotate(model, glm::radians(movTren), glm::vec3(0.0f, 1.0f, 0.0));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		PHorno.Draw(lightingShader);
+
 
 		//Traslucidez
 
@@ -649,6 +664,14 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "transparencia"), 0.0);
 		Ventanales.Draw(lightingShader);
+
+		//Tambien va animado
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, aperturaPuerta2));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1f(glGetUniformLocation(lightingShader.Program, "transparencia"), 0.0);
+		VidrioP.Draw(lightingShader);
 
 		//Pista de Hielo
 
