@@ -26,6 +26,8 @@
     <None Include="Shaders\anim.vs" />
     <None Include="Shaders\animAves.frag" />
     <None Include="Shaders\animAves.vs" />
+    <None Include="Shaders\AnimFuego.frag" />
+    <None Include="Shaders\AnimFuego.vs" />
     <None Include="Shaders\lamp.frag" />
     <None Include="Shaders\lamp.vs" />
     <None Include="Shaders\lighting.frag" />

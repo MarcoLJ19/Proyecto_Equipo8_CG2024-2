@@ -59,6 +59,12 @@
     <None Include="Shaders\animAves.vs">
       <Filter>Archivos de origen\Shaders</Filter>
     </None>
+    <None Include="Shaders\AnimFuego.vs">
+      <Filter>Archivos de origen\Shaders</Filter>
+    </None>
+    <None Include="Shaders\AnimFuego.frag">
+      <Filter>Archivos de origen\Shaders</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ProyectoFinal_Equipo8.cpp">
