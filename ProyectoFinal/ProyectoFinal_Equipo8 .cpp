@@ -599,12 +599,17 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Fountain.Draw(lightingShader);
 
+		//Pista de hielo
+		
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		IceRink.Draw(lightingShader);
+		
 		//Base del centro comercial
 		
 		model = glm::mat4(1);
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Mall.Draw(lightingShader);
-		
 
 		//Cafeteria Harry Potter
 		model = glm::mat4(1);
@@ -829,10 +834,10 @@ int main()
 
 		//Pista de Hielo
 
-		model = glm::mat4(1);
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glUniform1f(glGetUniformLocation(lightingShader.Program, "transparencia"), 0.0);
-		IceRink.Draw(lightingShader);
+		//model = glm::mat4(1);
+		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		//glUniform1f(glGetUniformLocation(lightingShader.Program, "transparencia"), 0.0);
+		//IceRink.Draw(lightingShader);
 
 		glDisable(GL_BLEND);
 		glEnable(GL_DEPTH_TEST);
